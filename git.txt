@@ -9,6 +9,7 @@
 4 vim readme.txt
   git add readme.tx
   git status
+  git diff readme.txt
   git commit -m "add readme.txt"
   git log --pretty=oneline
 
@@ -16,3 +17,30 @@
   git log 
   git reflog 
   git reset --hard d1e6a7
+
+6 git checkout -- readme.txt
+  git add readme.txt
+  git reset HEAD readme.txt
+  git checkout -- readme.txt
+
+7 git add test.txt
+  git commit test.txt 
+  rm test.txt
+  git rm test.txt
+  git commit -m "remove test.txt"
+ 
+8 git add test.txt
+  git commit test.txt
+  rm test.txt
+  git checkout -- test.txt
+
+9 cd 
+  ssh-keygen -t rsa -C "15061113566@163.com"
+  # then copy the id_rsa.pub to github
+  # then create a new repository called learngit
+  cd ~/AI/git/learngit
+  git remote add origin git@github.com:hua112358/learngit-.git 
+  git push -u origin master
+  git add readme.txt
+  git commit -m "add readme.txt"
+  git push origin master
