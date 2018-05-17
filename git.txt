@@ -1,0 +1,18 @@
+1 sudo apt-get install git
+
+2 git config --global user.name "hua112358"
+  git config --global user.email "15061113566@163.com"
+
+3 mkdir learngit 
+  git init
+
+4 vim readme.txt
+  git add readme.tx
+  git status
+  git commit -m "add readme.txt"
+  git log --pretty=oneline
+
+5 git reset --hard HEAD^
+  git log 
+  git reflog 
+  git reset --hard d1e6a7
