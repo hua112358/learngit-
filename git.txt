@@ -44,3 +44,32 @@
   git add readme.txt
   git commit -m "add readme.txt"
   git push origin master
+
+10 cd ~/AI/git 
+   git clone git@github.com:hua112358/gitskills.git
+
+11 git checkout -b dev
+   git branch
+   git add readme.txt
+   git commit -m "branch test"
+   git checkout master
+   git merge dev 
+   git branch -d dev
+
+12 git checkout -b feature1
+   git add readme.txt
+   git commit -m "change readme.txt"
+   git checkout master
+   git add readme.txt
+   git commit -m "change readme.txt"
+   git merge feature1
+   git add readme.txt
+   git commit -m "change readme.txt"
+   git branch -d feature1
+
+13 git checkout -b dev
+   git add readme.txt
+   git commit -m "change readme.txt"
+   git checkout master
+   git merge --no-ff -m "merge with no-ff" dev
+   git branch -d dev
