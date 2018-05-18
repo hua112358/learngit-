@@ -73,3 +73,19 @@
    git checkout master
    git merge --no-ff -m "merge with no-ff" dev
    git branch -d dev
+
+14 # 工作区和暂存区在各分支间共享，版本库在各分支间独立
+   # stash使得工作区和暂存区内容隐藏，不被共享
+   git checkout -b dev
+   git add stash.txt
+   git stash
+   git checkout master
+   git checkout -b bug1
+   git add readme.txt
+   git commit -m "fix the bug1"
+   git checkout master 
+   git merge --no-ff -m "merge bug1 with no-ff" bug1
+   git branch -d bug1
+   git checkout dev 
+   git stash list
+   git stash pop
